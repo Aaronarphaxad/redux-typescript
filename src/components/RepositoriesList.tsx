@@ -16,10 +16,6 @@ const RepositoriesList: React.FC = () => {
     focusRef.current.focus();
   }, []);
 
-  useEffect(() => {
-    searchRepositories(term);
-  }, [term]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTerm(e.target.value);
     if (!term) return;
